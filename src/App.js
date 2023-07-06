@@ -165,7 +165,7 @@ const App = () => {
           })
           .catch(error => {
             // console.log("error in response update name: ", error.response.data)
-            setErrorMessage(`Error:  ${error.response.data}`);
+            setErrorMessage(`Error:  ${error.response.data.error}`);
             setTimeout(() => {
               setErrorMessage(null)
             }, 5000)
