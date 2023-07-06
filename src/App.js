@@ -164,7 +164,8 @@ const App = () => {
             }, 5000)
           })
           .catch(error => {
-            setErrorMessage(`Person ${findPersonTest.name} has already been deleted`);
+            // console.log("error in response update name: ", error.response.data)
+            setErrorMessage(`Error:  ${error.response.data}`);
             setTimeout(() => {
               setErrorMessage(null)
             }, 5000)
@@ -190,7 +191,8 @@ const App = () => {
           }, 5000)
         })
         .catch(error => {
-          setErrorMessage(`something went wrong creating new entry`);
+          console.log("error in response new creation: ", error.response.data)
+          setErrorMessage(`error: ${error.response.data.error}`);
           setTimeout(() => {
             setErrorMessage(null)
           }, 5000)
